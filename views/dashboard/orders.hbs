@@ -1,0 +1,31 @@
+<div class="products">
+  <h5>Dashboard/Orders</h5>
+  <div class="Productss">
+    <h4>Orders :</h4>
+    <table class="responstable">
+      <tr class="head">
+        <th>From</th>
+        <th>Type</th>
+        <th>Email</th>
+        <th>Plan</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+      {{#each orders}}
+        <tr>
+          <td>{{this.from}}</td>
+          <td>{{this.type}}</td>
+          <td>{{this.email}}</td>
+          <td>{{this.plan}}</td>
+          <td>{{this.description}}</td>
+          <td>
+            <a class="suspend" href="#">Accept</a>
+            <a class="remove" href="#">Refuse</a>
+          </td>
+        </tr>
+        {{else}}
+          <tr><td>No Elements.</td></tr>
+        {{/each}}
+    </table>
+  </div>
+</div>

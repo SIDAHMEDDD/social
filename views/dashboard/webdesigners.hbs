@@ -1,0 +1,38 @@
+<div class="clients">
+  <h5>Dashboard/Webdesigners</h5>
+  <h3>Manage Users</h3>
+  <div class="active-users">
+    <table class="responstable">
+      <tr class="head">
+        <th>Username</th>
+        <th>Email</th>
+        <th>Country</th>
+        <th>City</th>
+        <th>Actions</th>
+      </tr>
+      {{#each designers}}
+        <tr>
+          <td>{{this.username}}</td>
+          <td>{{this.email}}</td>
+          <td>{{this.country}}</td>
+          <td>{{this.city}}</td>
+          <td>
+            This user cannot be modified or deleted
+          </td>
+        </tr>
+        <tr>
+          <td>{{this.username}}</td>
+          <td>{{this.email}}</td>
+          <td>{{this.country}}</td>
+          <td>{{this.city}}</td>
+          <td>
+            <a class="suspend" href="#">Suspend</a>
+            <a class="remove" href="#">Remove</a>
+          </td>
+        </tr>
+      {{else}}
+        <tr><td>No Designers.</td></tr>
+      {{/each}}
+    </table>
+  </div>
+</div>

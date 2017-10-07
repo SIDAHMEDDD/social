@@ -1,0 +1,41 @@
+<div class="clients">
+  <h5>Dashboard/Administrators</h5>
+  <h3>Manage Users</h3>
+  <div class="active-users">
+    <table class="responstable">
+      <tr class="head">
+        <th>Username</th>
+        <th>Email</th>
+        <th>Country</th>
+        <th>City</th>
+        <th>Actions</th>
+      </tr>
+      {{#each admins}}
+        {{#ifCond this.username "admin"}}
+          <tr>
+            <td>{{this.username}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.country}}</td>
+            <td>{{this.city}}</td>
+            <td>
+              This user cannot be modified or deleted
+            </td>
+          </tr>
+        {{else}}
+          <tr>
+            <td>{{this.username}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.country}}</td>
+            <td>{{this.city}}</td>
+            <td>
+              <a class="suspend" href="/view/{{this.id}}">View</a>
+              <a class="remove" href="/dashboard/remove/{{this.id}}">Remove</a>
+            </td>
+          </tr>
+        {{/ifCond}}
+      {{else}}
+          <tr><td>No Admins.</td></tr>
+      {{/each}}
+    </table>
+  </div>
+</div>

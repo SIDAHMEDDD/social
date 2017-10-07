@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gamehub | {{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/css/style.css' />
+    <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Sansita" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="/vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/behaviors.js"></script>
+  </head>
+  <body>
+    <nav class="main">
+      {{#if user}}
+        <a href="/" class="logo">Game<i class="hl">h</i>ub</a>
+        <a href="/users/logout" class="item">Logout</a>
+        <a href="/about" class="item {{class4}}">About</a>
+        <a href="/templates" class="item {{class3}}">Games</a>
+        {{#ifCond user.userType  "Normal"}}
+          <a href="/" class="item {{class1}}">Home</a>
+        {{else}}
+          <a href="/dashboard/main" class="item">Admin Dashboard</a>
+        {{/ifCond}}
+      {{else}}
+        <a href="/" class="logo">Game<i class="hl">h</i>ub</a>
+        <a href="/users/register" class="item">Sign up</a>
+        <a href="/users/login" class="item">Log in</a>
+        <a href="/about" class="item {{class4}}">About</a>
+        <a href="/templates" class="item {{class3}}">Games</a>
+        <a href="/" class="item {{class1}}">Overview</a>
+      {{/if}}
+      <a href="#" class="nvb-collapse right"><i class="fa fa-bars" aria-hidden="true"></i></a>
+    </nav>
+    {{{body}}}
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<header>
+  <h1>Everything about games</h1>
+      <h4>Games, news, backgrounds</h4>
+      <h1>{{templates.length}}</h1>
+</header>
+<div class="social-bar">
+  <a href="#" class="fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+  <a href="https://www.youtube.com/channel/UCctgous97oxi4FGCm4pQF7g" class="yt"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+  <a href="#" class="tw"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+</div>
+<div class="features">
+    <div class="feature">
+        <h4>Download Games</h4>
+        <i class="fa fa-download" aria-hidden="true"></i>
+
+    </div>
+    <div class="feature">
+        <h4>Free Backgrounds</h4>
+        <i class="fa fa-picture-o"></i>
+    </div>
+    <div class="feature">
+        <h4>News</h4>
+        <i class="fa fa-newspaper-o"></i>
+    </div>
+</div>
+<div class="latest-post">
+    <h3>Most visited</h3>
+    {{#each templatesL}}
+        <div class="post">
+            <img src={{this.pictureLink}} alt="">
+            <h4>Grand theft auto 5</h4>
+            <a href="" class="gdown">Read More</a>
+            <p>lorem ipsum sit dolor amet</p>
+        </div>
+    {{/each}}
+</div>
+<div class="latest-post">
+    <h3>Trending</h3>
+    {{#each templatesL}}
+        <div class="post">
+            <img src={{this.pictureLink}} alt="">
+            <h4>Grand theft auto 5</h4>
+            <a href="" class="gdown">Read More</a>
+            <p>lorem ipsum sit dolor amet</p>
+        </div>
+    {{/each}}
+</div>
+<footer>
+  <div class="menu">
+    <ul>
+      <li><h3>Gamehub</h3></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/templates">Gallery</a></li>
+      <li><a href="/blog">Blog</a></li>
+    </ul>
+    <ul>
+      <li><h3>Resources</h3></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/docs">Docs</a></li>
+      <li><a href="/support">Support</a></li>
+    </ul>
+  </div>
+  <div class="legal-line">
+    <h5>&copy; 2017 SART All rights reserved.</h5>
+  </div>
+</footer>

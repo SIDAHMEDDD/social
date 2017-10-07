@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/css/login.css' />
+    <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Sansita" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="/javascripts/behaviors.js"></script>
+    <script type="text/javascript" src="/vendor/jquery.min.js"></script>
+  </head>
+  <body>
+    <form class="login" action="/users/authenticate" method="post">
+      <h1>Login</h1>
+      <input type="text" name="username" placeholder="Username" />
+      <input type="password" name="password" placeholder="Password" />
+      <button type="submit">Log in</button>
+      <a href="/" class="back">Back</a>
+      <a href="#">Forget password?</a>
+      <a href="/users/register">Register</a>
+    </form>
+  </body>
+</html>

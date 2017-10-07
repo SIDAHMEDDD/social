@@ -1,0 +1,33 @@
+<div class="products">
+  <h5>Dashboard/Products</h5>
+  <div class="Productss">
+    <h4>Products :</h4>
+    <table class="responstable">
+      <tr class="head">
+        <th>Name</th>
+        <th>Category</th>
+        <th>Rank</th>
+        <th>Link</th>
+        <th>Uploader</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+      {{#each products}}
+        <tr>
+          <td>{{this.name}}</td>
+          <td>{{this.category}}</td>
+          <td>{{this.downloadRank}}</td>
+          <td>{{this.downloadLink}}</td>
+          <td>{{this.uploadedBy}}</td>
+          <td>{{this.price}}</td>
+          <td>
+            <a class="suspend" href="#">Edit</a>
+            <a class="remove" href="#">Remove</a>
+          </td>
+        </tr>
+        {{else}}
+          <tr><td>No Elements.</td></tr>
+      {{/each}}
+    </table>
+  </div>
+</div>

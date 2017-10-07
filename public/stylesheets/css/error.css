@@ -1,0 +1,52 @@
+/* line 3, ../sass/error.scss */
+body {
+  font-family: 'Sansita', sans-serif;
+  margin: auto;
+  overflow-x: hidden;
+  background-color: #34495e;
+}
+
+/* line 9, ../sass/error.scss */
+h1 {
+  text-align: right;
+  font-size: 5em;
+  margin-top: 200px;
+  margin-right: 200px;
+  color: white;
+}
+
+/* line 16, ../sass/error.scss */
+h2 {
+  text-align: right;
+  font-size: 2em;
+  margin-right: 200px;
+  color: white;
+}
+
+/* line 22, ../sass/error.scss */
+div.controlls {
+  margin-top: -100px;
+  margin-left: 200px;
+}
+/* line 25, ../sass/error.scss */
+div.controlls button {
+  color: white;
+  background-color: #f1c40f;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 12px 20px 12px 20px;
+  vertical-align: middle;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+/* line 34, ../sass/error.scss */
+div.controlls button:hover {
+  background-color: #f39c12;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}

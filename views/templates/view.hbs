@@ -1,0 +1,87 @@
+<div class="template-details">
+  <h1 class="title">{{template.name}} Free Download {{template.category}} Game</h1>
+  <p class="details">
+    Category:&nbsp;&nbsp;<span class="red">{{template.category}}</span>
+    &nbsp;|&nbsp;
+    Author:&nbsp;&nbsp;<a href="#">{{template.uploadedBy}}</a>
+    &nbsp;|&nbsp;
+    Downloads:&nbsp;&nbsp;<span class="red">{{template.downloadRank}}</span>
+  </p>
+  <img src="/images/game.png" class="titleimg" alt=""/>
+  <img src="/images/image1.jpg" class="addimg" alt="">
+  <img src="/images/image2.jpg" class="addimg" alt="">
+  <img src="/images/image3.jpg" class="addimg" alt="">
+  <img src="/images/image3.jpg" class="addimg" alt="">
+  <h2 class="similiar">Details</h2>
+  <div class="details">
+    <h4>About {{template.name}}</h4>
+    <hr>
+    <ul>
+      <li id="highlighted"><h6>Release date: </h6></li>
+      <li><h6>Gameplay mode: </h6></li>
+      <li id="highlighted"><h6>Developers: </h6></li>
+    </ul>
+    <h4>Tags</h4>
+    <hr>
+    <ul>
+      <li><h6 id="badge">{{template.tag1}}</h6>
+      <h6 id="badge">{{template.tag2}}</h6>
+      <h6 id="badge">{{template.tag3}}</h6>
+      <h6 id="badge">{{template.tag4}}</h6>
+      <h6 id="badge">{{template.tag5}}</h6>
+      <h6 id="badge">{{template.tag6}}</h6></li>
+    </ul>
+    <h4>System Requirements</h4>
+    <hr>
+    <ul>
+      <li><h6>Processor: {{template.requiredcpu}}</h6></li>
+      <li id="highlighted"><h6>Memory: {{template.requiredram}}</h6></li>
+      <li><h6>Graphics Card: {{template.requiredgraphics}}</h6></li>
+      <li id="highlighted"><h6>Operating System: {{template.requiredos}}</h6></li>
+    </ul>
+    <h4>Download</h4>
+    <hr>
+    <div class="controlls">
+        <a class="dwn" href="#"><i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download</a>
+        <a class="prv" href="#" onclick="goBack()"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Go Back</a>
+    </div>
+
+  </div>
+  <h2 class="similiar">Similiar Games</h2>
+  <div class="templates rel clearfix">
+    {{#each related}}
+      <div class="template">
+        <img alt={{this.pictureLink}} src={{this.pictureLink}} />
+        <a class="name" href="/templates/view/{{ this.id }}">{{this.name}}</a>
+        <p>{{this.category}}</p>
+        <p id="downloads">{{this.downloadRank}} Downloads</p>
+      </div>
+    {{/each}}
+  </div>
+  {{#if user}}
+      <div class="comments-main">
+          <h4>Leave a comment :</h4>
+          <form class="comment" action="/comment" method="post">
+              <input type="text" name="postid" hidden="hidden" value={{template.id}}>
+              <textarea name="content" id="" cols="30" rows="10" placeholder="Comment here..."></textarea>
+              <button class="cm-post" type="submit"><i class="fa fa-paper-plane"></i>&nbsp;Post Comment</button>
+          </form>
+          <h4>Comments ({{comments.length}})</h4>
+          <div class="comments">
+              {{#each comments}}
+                  <div class="comment">
+                      <i class="fa fa-user-circle fa-2x"></i>
+                      <a href="#">{{this.user}}</a>
+                      <p>{{this.content}}</p>
+                  </div>
+              {{else}}
+                  <h4>No Comments.</h4>
+              {{/each}}
+          </div>
+      </div>
+  {{else}}
+      <div class="comments-main">
+          <h4>You need to login to post comments: <a href="/users/login">Login</a> or <a href="/users/register">Register</a></h4>
+      </div>
+  {{/if}}
+</div>

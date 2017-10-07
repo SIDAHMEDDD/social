@@ -1,0 +1,13 @@
+<div class="list">
+    {{#each results}}
+        <div class="template">
+            <img alt={{this.pictureLink}} src={{this.pictureLink}} />
+            <a class="name" href="/templates/view/{{ this.id }}">{{this.name}}</a>
+            <p>{{this.category}}</p>
+            <p id="downloads">{{this.downloadRank}} Downloads</p>
+        </div>
+    {{else}}
+        <h1>No results found for :</h1>
+        <h1>{{searchquery}}</h1>
+    {{/each}}
+</div>

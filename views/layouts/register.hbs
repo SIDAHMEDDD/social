@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/css/register.css' />
+    <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Sansita" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="/javascripts/behaviors.js"></script>
+    <script type="text/javascript" src="/vendor/jquery.min.js"></script>
+  </head>
+  <body>
+    <form class="login" method="post" action="/users/createuser">
+      <h1>Register</h1>
+      <input type="text" name="username" placeholder="Username" />
+      <input type="email" name="email" placeholder="Email Adress">
+      <input type="password" name="password" placeholder="Password" />
+      <input type="password" name="passwordcnf" placeholder="Password Confirmation" />
+      <input type="text" name="country" placeholder="Country">
+      <input type="text" name="city" placeholder="City">
+      <input type="text" name="postalcode" placeholder="Postal Code">
+      <button type="submit">Register</button>
+      <a href="/" class="back">Back</a>
+      <a href="/users/login">Login</a>
+    </form>
+  </body>
+</html>

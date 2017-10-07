@@ -1,0 +1,27 @@
+{{> categories }}
+<div class="all list">
+    <h2>All categories</h2>
+    <ul>
+        <li><a href="/games">All</a></li>
+        <li><a href="/games/action">Action</a></li>
+        <li><a href="/games/adventure">Adventure</a></li>
+        <li><a href="/games/fighting">Fighting</a></li>
+        <li><a href="/games/horror">Horror</a></li>
+        <li><a href="/games/racing">Racing</a></li>
+        <li><a href="/games/shooting">Shooting</a></li>
+        <li><a href="/games/simulation">Simulation</a></li>
+        <li><a href="/games/sports">Sports</a></li>
+        <li><a href="/games/strategy">Strategy</a></li>
+        <li><a href="/games/war">War</a></li>
+    </ul>
+</div>
+<div class="templates clearfix">
+  {{#each templates}}
+    <div class="template">
+      <img alt={{this.pictureLink}} src={{this.pictureLink}} />
+      <a class="name" href="/templates/view/{{ this.id }}">{{this.name}}</a>
+      <p>{{this.category}}</p>
+      <p id="downloads">{{this.downloadRank}} Downloads</p>
+    </div>
+  {{/each}}
+</div>

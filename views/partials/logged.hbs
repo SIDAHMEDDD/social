@@ -1,0 +1,58 @@
+<div class="user">
+  <form class="search" action="/search" method="post">
+    <input type="text" name="query" placeholder="Search For Games">
+    <button type="submit" name="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+  </form>
+  <h3>Welcome {{user.username}}</h3>
+  <h3>{{currentDate}}</h3>
+</div>
+<div class="list">
+  <h4>Recent Activities</h4>
+  <div class="recent">
+      <div class="templates clearfix">
+          {{#each templates}}
+              <div class="template">
+                  <img alt={{this.pictureLink}} src={{this.pictureLink}} />
+                  <a class="name" href="/templates/view/{{ this.id }}">{{this.name}}</a>
+                  <p>{{this.category}}</p>
+                  <p id="downloads">{{this.downloadRank}} Downloads</p>
+              </div>
+          {{/each}}
+      </div>
+  </div>
+</div>
+<div class="list">
+  <h4>Trending</h4>
+  <div class="trending">
+      <div class="templates clearfix">
+          {{#each templates}}
+              <div class="template">
+                  <img alt={{this.pictureLink}} src={{this.pictureLink}} />
+                  <a class="name" href="/templates/view/{{ this.id }}">{{this.name}}</a>
+                  <p>{{this.category}}</p>
+                  <p id="downloads">{{this.downloadRank}} Downloads</p>
+              </div>
+          {{/each}}
+      </div>
+  </div>
+</div>
+<footer>
+  <div class="menu">
+    <ul>
+      <li><h3>Gamehub</h3></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/Services">Services</a></li>
+      <li><a href="/templates">Gallery</a></li>
+      <li><a href="/blog">Blog</a></li>
+    </ul>
+    <ul>
+      <li><h3>Resources</h3></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/docs">Docs</a></li>
+      <li><a href="/support">Support</a></li>
+    </ul>
+  </div>
+  <div class="legal-line">
+    <h5>&copy; 2017 SART All rights reserved.</h5>
+  </div>
+</footer>

@@ -1,0 +1,14 @@
+{{> categories }}
+<div class="list">
+  <h2>Facebook And Youtube Covers</h2>
+</div>
+<div class="templates clearfix">
+  {{#each templates}}
+    <div class="template">
+      <img alt={{this.pictureLink}} src={{this.pictureLink}} />
+      <a class="name" href="/templates/view/{{ this.id }}">{{this.name}}</a>
+      <p>{{this.category}}</p>
+      <p id="downloads">{{this.downloadRank}} Downloads</p>
+    </div>
+  {{/each}}
+</div>
