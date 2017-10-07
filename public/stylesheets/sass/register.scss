@@ -1,0 +1,76 @@
+@import 'compass/css3';
+
+body{
+  font-family: 'Sansita', sans-serif;
+  background-color: #e74c3c;
+  background: url('/images/background.jpg') no-repeat;
+  background-attachment: fixed;
+  margin: auto;
+  text-align: center;
+  overflow-x: hidden;
+}
+form.login{
+  display: inline-block;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  padding: 50px 100px 50px 100px;
+  @include box-shadow(0 2px 4px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24));
+  a{
+    color: #95a5a6;
+    text-decoration: none;
+    font-size: 0.8em;
+    margin-right: 10px;
+    &:hover{
+      color: #7f8c8d;
+      @include transition-duration(0.5s);
+    }
+  }
+  a.back{
+    display: block;
+    padding-bottom: 20px;
+  }
+  img{
+    width: 10%;
+    display: block;
+  }
+  h1{
+    color: #95a5a6;
+    font-family: 'Gloria Hallelujah', cursive;
+  }
+  input{
+    font-family: 'Sansita', sans-serif;
+    background-color: #ecf0f1;
+    display: block;
+    padding: 15px 100px 15px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  button{
+    color: white;
+    background-color: #1abc9c;
+    display: block;
+    border: none;
+    border-radius: 5px;
+    padding: 13px 105px 10px 105px;
+    margin-bottom: 20px;
+    @include transition-duration(0.5s);
+    &:hover{
+      cursor: pointer;
+      background-color: #16a085;
+      @include transition-duration(0.5s);
+    }
+  }
+  i{
+    color: white;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width:700px){
+  form.login{
+    padding: 15px 15px 15px 15px;
+  }
+}
